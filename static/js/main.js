@@ -8,8 +8,7 @@ fetch('https://https://fsp1020.github.io/TexasEducatorJobFinderDeploy/static/dat
     //json vaiable contains object with data
   })
 
-function get_data(data) {
-    // console.log(data)
+function get_data() {
     isd_data = res;
   
     // Loop through the JSON data and add markers to the marker cluster group
