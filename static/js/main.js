@@ -51,36 +51,31 @@ input1.addEventListener("keyup", function (event) {
 });
 
 function runCallback1() {
-  // console.log(isd_query); // use isd_query variable in the callback function
+    // console.log(isd_query); // use isd_query variable in the callback function
 
-  // Clear the marker cluster group from the map
-  markers.clearLayers();
+    // Clear the marker cluster group from the map
+    markers.clearLayers();
 
-  // Initialize the marker cluster group
-  markers = L.markerClusterGroup();
+    // Initialize the marker cluster group
+    markers = L.markerClusterGroup();
 
-  for (var key in X_coords) {
-    if (
-      districtNames[key] &&
-      districtNames[key].toLowerCase().includes(isd_query.toLowerCase()) &&
-      employment_text[key] &&
-      employment_text[key].toLowerCase().includes(keyword_query.toLowerCase())
-    ) {
-      var marker = L.marker([Y_coords[key], X_coords[key]]);
-      marker.bindPopup(
-        "<a href='" +
-          isd_data["Employment_Url"][key] +
-          "' target='_blank'>" +
-          districtNames[key] +
-          "</a>"
-      );
-      markers.addLayer(marker);
+    for (var key in X_coords) {
+      if (districtNames[key] && districtNames[key].toLowerCase().includes(isd_query.toLowerCase())) {
+        var marker = L.marker([Y_coords[key], X_coords[key]]);
+        marker.bindPopup(
+          "<a href='" +
+            isd_data["Employment_Url"][key] +
+            "' target='_blank'>" +
+            districtNames[key] +
+            "</a>"
+        );
+        markers.addLayer(marker);
+      }
     }
-  }
 
-  // Add the marker cluster group to the map
-  map.addLayer(markers);
-}
+    // Add the marker cluster group to the map
+    map.addLayer(markers);
+  }
 
 var input2 = document.getElementById("input2");
 input2.addEventListener("keyup", function (event) {
@@ -89,34 +84,29 @@ input2.addEventListener("keyup", function (event) {
 });
 
 function runCallback2() {
-  // console.log(keyword_query); // use keyword_query variable in the callback function
+// console.log(keyword_query); // use keyword_query variable in the callback function
 
-  // Clear the marker cluster group from the map
-  markers.clearLayers();
+// Clear the marker cluster group from the map
+markers.clearLayers();
 
-  // Initialize the marker cluster group
-  markers = L.markerClusterGroup();
+// Initialize the marker cluster group
+markers = L.markerClusterGroup();
 
-  for (var key in X_coords) {
-    if (
-      districtNames[key] &&
-      districtNames[key].toLowerCase().includes(isd_query.toLowerCase()) &&
-      employment_text[key] &&
-      employment_text[key].toLowerCase().includes(keyword_query.toLowerCase())
-    ) {
-      var marker = L.marker([Y_coords[key], X_coords[key]]);
-      marker.bindPopup(
-        "<a href='" +
-          isd_data["Employment_Url"][key] +
-          "' target='_blank'>" +
-          districtNames[key] +
-          "</a>"
-      );
-      markers.addLayer(marker);
-    }
+for (var key in X_coords) {
+  if (employment_text[key] && employment_text[key].toLowerCase().includes(keyword_query.toLowerCase())) {
+    var marker = L.marker([Y_coords[key], X_coords[key]]);
+    marker.bindPopup(
+      "<a href='" +
+        isd_data["Employment_Url"][key] +
+        "' target='_blank'>" +
+        districtNames[key] +
+        "</a>"
+    );
+    markers.addLayer(marker);
   }
+}
 
-  // Add the marker cluster group to the map
-  map.addLayer(markers);
+// Add the marker cluster group to the map
+map.addLayer(markers);
 }
   })
