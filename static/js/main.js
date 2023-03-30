@@ -7,7 +7,8 @@ fetch('https://fsp1020.github.io/TexasEducatorJobFinderDeploy/static/data/TexasE
   .then(json => {
     //json vaiable contains object with data
     isd_data = json;
-  })
+
+    console.log(isd_data)
 
 // Loop through the JSON data and add markers to the marker cluster group
 var X_coords = isd_data["X"];
@@ -108,6 +109,4 @@ for (var key in X_coords) {
 // Add the marker cluster group to the map
 map.addLayer(markers);
 }
-
-
-
+  })
