@@ -1,9 +1,16 @@
 var isd_query;
 var keyword_query;
+var res;
+
+fetch('https://https://fsp1020.github.io/TexasEducatorJobFinderDeploy/static/data/TexasEmploymentSites_Filled.json')
+  .then(res => res.json())
+  .then(json => {
+    //json vaiable contains object with data
+  })
 
 function get_data(data) {
     // console.log(data)
-    isd_data = data;
+    isd_data = res;
   
     // Loop through the JSON data and add markers to the marker cluster group
     var X_coords = isd_data["X"];
