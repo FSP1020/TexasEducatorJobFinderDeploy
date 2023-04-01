@@ -31,3 +31,21 @@ height: 100vh;
 .footer-text {
     margin: 3rem;
 }
+
+
+/* media query for small screens */
+@media only screen and (max-width: 767px) {
+    /* set up the grid with one column */
+    .main-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas:
+          "sidebar"
+          "map";
+    }
+
+    /* set up the sidebar area for small screens */
+    .sidebar {
+        width: 100%;
+    }
+}
