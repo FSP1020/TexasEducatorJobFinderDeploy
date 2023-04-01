@@ -1,3 +1,8 @@
+body{
+    background-color: #C8B9B4;
+    color: white;
+}
+
 /* set up the grid with three columns */
 .main-content {
     display: grid;
@@ -11,13 +16,12 @@
 h1 {
 grid-area: header;
 text-align: center;
-margin: 20px;
 }
 
 /* set up the sidebar area */
 .sidebar {
 grid-area: sidebar;
-background-color: #f0f0f0;
+background-color: #d1c9c6;
 padding: 20px;
 height: 100vh;
 }
@@ -28,10 +32,13 @@ grid-area: map;
 height: 100vh;
 }
 
-.footer-text {
-    margin: 3rem;
+.keyword_input {
+    margin-top: 10px;
 }
 
+footer {
+    background-color: #e2dad7;
+}
 
 /* media query for small screens */
 @media only screen and (max-width: 767px) {
@@ -46,6 +53,28 @@ height: 100vh;
 
     /* set up the sidebar area for small screens */
     .sidebar {
+        background-color: #C8B9B4;
         width: 100%;
+        height: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "k_label k_input";
     }
+
+    .keyword_label {
+        grid-area: k_label;
+        width: 30vw;
+    }
+
+    .keyword_class {
+        grid-area: k_input;
+        width: 48vw;
+    }
+
+    /* set up the map area */
+    #map {
+        grid-area: map;
+        height: 60vh;
+        width: 100vw;
+        }
 }

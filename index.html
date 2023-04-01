@@ -21,20 +21,24 @@
     <link rel="stylesheet" type="text/css" href="https://fsp1020.github.io/TexasEducatorJobFinderDeploy/static/css/main.css">
 </head>
 <body>
-	<h1>Texas Educator Job Search</h1>
+	<h1 class="my-2">Texas Educator Job Search</h1>
 
 	<div class="main-content">
-	<!-- Create the sidebar -->
-	<div class="sidebar">
-		<h4>Keyword Search</h4>
-		<label for="input1">Filter by ISD:</label>
-		<input type="text" id="input1"><br><br>
-		<label for="input2">Filter by keyword:</label>
-		<input type="text" id="input2">
-	</div>
+		<!-- Create the sidebar -->
+		<div class="sidebar">
+			<h4>Keyword Search</h4>
+			<div class="keyword_input">
+				<label class="keyword_label" for="input1">Filter by ISD:</label>
+				<input class="keyword_class" type="text" id="input1">
+			</div>
+			<div class="keyword_input">
+				<label class="keyword_label" for="input2">Filter by keyword:</label>
+				<input class="keyword_class" type="text" id="input2">
+			</div>
+		</div>
 
-	<!-- Create the main content area with Leaflet map -->
-	<div id="map"></div>
+		<!-- Create the main content area with Leaflet map -->
+		<div id="map"></div>
 
 	</div>	
 
@@ -43,10 +47,11 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 
 	<!-- Add footer -->
-    <footer class="footer mt-auto py-3 bg-light">
+    <footer class="footer mt-auto py-3">
         <div class="container">
             <span class="footer-text text-muted">&copy; 2023 Samuel Pomajevich. All rights reserved.</span>
-            <span class="footer-text text-muted">For more information, contact <a href="mailto:sam.pomajevich@verizon.net">sam.pomajevich@verizon.net</a>.</span>
+			<br>
+            <span class="footer-text text-muted">For more information, contact <a class="text-muted" href="mailto:sam.pomajevich@verizon.net">sam.pomajevich@verizon.net</a>.</span>
         </div>
     </footer>
 </body>
