@@ -41,8 +41,11 @@ fetch('https://fsp1020.github.io/TexasEducatorJobFinderDeploy/static/data/TexasE
     var first_row = document.createElement("tr");
     var districtCol = document.createElement("td");
     districtCol.textContent = "District Name";
+    var urlCol = document.createElement("td");
+    urlCol.textContent = "Employment Link";
 
     first_row.appendChild(districtCol);
+    first_row.appendChild(urlCol);
 
     jobTable.appendChild(first_row);
 
@@ -70,14 +73,15 @@ fetch('https://fsp1020.github.io/TexasEducatorJobFinderDeploy/static/data/TexasE
       // create table row
       var row = document.createElement("tr");
       var districtCol = document.createElement("td");
+      districtCol.textContent = districtNames[key];
+      var urlCol = document.createElement("td");
       var link = document.createElement("a");
-      link.textContent = districtNames[key];
+      link.textContent = isd_data["Employment_Url"][key];
       link.href = isd_data["Employment_Url"][key];
-      link.target = "_blank";
-      districtCol.appendChild(link);
-      districtCol.classList.add("link-row");
+      urlCol.appendChild(link);
 
       row.appendChild(districtCol);
+      row.appendChild(urlCol);
 
       jobTable.appendChild(row);
     }
@@ -102,8 +106,11 @@ function runCallback1() {
     var first_row = document.createElement("tr");
     var districtCol = document.createElement("td");
     districtCol.textContent = "District Name";
+    var urlCol = document.createElement("td");
+    urlCol.textContent = "Employment Link";
 
     first_row.appendChild(districtCol);
+    first_row.appendChild(urlCol);
 
     jobTable.appendChild(first_row);
 
@@ -132,18 +139,21 @@ function runCallback1() {
         );
         markers.addLayer(marker);
 
-      // create table row
-      var row = document.createElement("tr");
-      var districtCol = document.createElement("td");
-      var link = document.createElement("a");
-      link.textContent = districtNames[key];
-      link.href = isd_data["Employment_Url"][key];
-      link.target = "_blank";
-      districtCol.appendChild(link);
+        // create table row
+        var row = document.createElement("tr");
+        var districtCol = document.createElement("td");
+        districtCol.textContent = districtNames[key];
+        var urlCol = document.createElement("td");
+        var link = document.createElement("a");
+        link.textContent = isd_data["Employment_Url"][key];
+        link.href = isd_data["Employment_Url"][key];
+        urlCol.appendChild(link);
 
-      row.appendChild(districtCol);
 
-      jobTable.appendChild(row);
+        row.appendChild(districtCol);
+        row.appendChild(urlCol);
+
+        jobTable.appendChild(row);
       }
     }
 
@@ -168,8 +178,11 @@ function runCallback2() {
   var first_row = document.createElement("tr");
   var districtCol = document.createElement("td");
   districtCol.textContent = "District Name";
+  var urlCol = document.createElement("td");
+  urlCol.textContent = "Employment Link";
 
   first_row.appendChild(districtCol);
+  first_row.appendChild(urlCol);
 
   jobTable.appendChild(first_row);
 
@@ -201,13 +214,16 @@ function runCallback2() {
       // create table row
       var row = document.createElement("tr");
       var districtCol = document.createElement("td");
+      districtCol.textContent = districtNames[key];
+      var urlCol = document.createElement("td");
       var link = document.createElement("a");
-      link.textContent = districtNames[key];
-      link.href = isd_data["Employment_Url"][key]
-      link.target = "_blank";
-      districtCol.appendChild(link);
+      link.textContent = isd_data["Employment_Url"][key];
+      link.href = isd_data["Employment_Url"][key];
+      urlCol.appendChild(link);
+
 
       row.appendChild(districtCol);
+      row.appendChild(urlCol);
 
       jobTable.appendChild(row);
     }
