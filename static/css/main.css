@@ -1,5 +1,71 @@
 body{
+<<<<<<< Updated upstream
     background-color: #C8B9B4;
+=======
+    background: linear-gradient(to right, #4b86b4, #2d4e70);
+    color: white;
+}
+
+.top-bar {
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    height: 20px;
+  }
+  
+.brand {
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.brand a {
+  text-decoration: none;
+  color: black;
+}
+
+.top-links {
+  margin-left: auto;
+}
+
+.top-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.top-links li {
+  margin-right: 20px;
+}
+
+.top-links li:last-child {
+  margin-right: 0;
+}
+
+.top-links a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.top-links a:hover {
+  text-shadow: 1px 1px 1px gray;
+}
+  
+  
+/* set up the header area */
+h1 {
+text-align: center;
+text-shadow: 0.05rem 0.1rem 0.05rem rgb(69, 68, 68);
+}
+
+h1 a {
+    text-decoration: none;
+>>>>>>> Stashed changes
     color: white;
 }
 
@@ -26,11 +92,19 @@ padding: 20px;
 height: 100vh;
 }
 
+<<<<<<< Updated upstream
+=======
+.card {
+    height: 100vh;
+    border-radius: 2px;
+}
+>>>>>>> Stashed changes
 
 /* set up the map area */
 #map {
     grid-area: map;
     height: 100vh;
+    border-radius: 2px;;;
 }
 
 #map.hidden {
@@ -40,6 +114,10 @@ height: 100vh;
 .keyword_input {
     margin-top: 10px;
 }
+
+ .row {
+  margin-right: 0;
+ }
 
 #job_table {
     width: 100%;
@@ -80,13 +158,20 @@ footer {
     background-color: #e2dad7;
 }
 
-/* media query for small screens */
-@media only screen and (max-width: 767px) {
-    body{
-        background-color: #C8B9B4;
-        color: white;
-    }
+@media (min-width: 768px) and (max-width: 1150px) {
+  .keyword_label {
+    display: inline-block;
+    width: 50%;
+  }
+  .keyword_class {
+    display: inline-block;
+    width: 40%;
+  }
+}
 
+
+/* media query for small screens */
+@media (min-width: 401px) and (max-width: 767px) {
     /* set up the header area */
     h1 {
         grid-area: header;
@@ -94,23 +179,19 @@ footer {
         font-size: 1.5rem;
         }
 
-    h4 {
-        font-size: 0.85rem;
-    }
-
     /* set up the grid with one column */
     .main-content {
         font-size: 0.8rem;
         grid-template-columns: 1fr;
         grid-template-rows: auto 1fr;
         grid-template-areas:
-          "sidebar"
-          "map";
+          "map"
+          "datatable";
     }
 
     /* set up the sidebar area for small screens */
     .sidebar {
-        background-color: #C8B9B4;
+        background-color: linear-gradient(to right, #4b86b4, #2d4e70);
         width: 100%;
         height: auto;
         grid-template-columns: 1fr 1fr;
@@ -120,12 +201,20 @@ footer {
 
     .keyword_label {
         grid-area: k_label;
-        width: 30vw;
+        width: 36vw;
     }
 
     .keyword_class {
         grid-area: k_input;
-        width: 48vw;
+        width: 55vw;
+    }
+
+    .card {
+      margin-top: 1rem;
+    }
+
+    .lower-key {
+      margin-top: 0.5rem;
     }
 
     /* set up the map area */
@@ -140,6 +229,7 @@ footer {
     }
 }
 
+<<<<<<< Updated upstream
 /* media query for small screens */
 @media only screen and (max-width: 327px) {
     body{
@@ -181,3 +271,63 @@ footer {
         width: 100vw;
         }
 }
+=======
+@media only screen and (max-width: 400px) {
+  /* set up the header area */
+  h1 {
+    grid-area: header;
+    text-align: center;
+    font-size: 1.5rem;
+    }
+
+/* set up the grid with one column */
+.main-content {
+    font-size: 0.8rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "map"
+      "datatable";
+}
+
+/* set up the sidebar area for small screens */
+.sidebar {
+    background-color: linear-gradient(to right, #4b86b4, #2d4e70);
+    width: 100%;
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "k_label k_input";
+}
+
+.keyword_label {
+    margin-left: 0.5rem;
+    grid-area: k_label;
+    width: 38vw;
+}
+
+.keyword_class {
+    grid-area: k_input;
+    width: 55vw;
+}
+
+.card {
+  margin-top: 1rem;
+}
+
+.lower-key {
+  margin-top: 0.5rem;
+}
+
+/* set up the map area */
+#map {
+    grid-area: map;
+    height: 60vh;
+    width: 100vw;
+    }
+
+footer {
+    font-size: .8rem;
+}
+}
+>>>>>>> Stashed changes

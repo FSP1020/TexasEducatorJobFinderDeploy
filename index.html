@@ -26,6 +26,7 @@
     <link rel="stylesheet" type="text/css" href="https://fsp1020.github.io/TexasEducatorJobFinderDeploy/static/css/main.css">
 </head>
 <body>
+<<<<<<< Updated upstream
 	<h1 class="mt-2 mb-1">Texas Educator Job Search</h1>
 
 	<div class="main-content">
@@ -39,6 +40,43 @@
 			<div class="keyword_input">
 				<label class="keyword_label" for="input2">Filter by keyword:</label>
 				<input class="keyword_class" type="text" id="input2">
+=======
+	<div class="top-bar">
+		<div class="brand"><a href="#">TexEdJobs</a></div>
+		<nav class="top-links">
+			<ul>
+				<li>
+					<a href="#">Contact Us</a>
+				</li>
+				<li>
+					<a href="#">Log Out</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	
+
+	<h1 class="mt-2 mb-1"><a href="#">Texas Educator Job Search</a></h1>
+
+	<!-- Create the sidebar -->
+	<div class="keyword_input row mt-4 mb-3">
+		<div class="col-md-1"></div>
+		<div class="col-md-5">
+		  <label class="keyword_label" for="input1">Filter by ISD:</label>
+		  <input class="keyword_class" type="text" id="input1">
+		</div>
+		<div class="lower-key col-md-5">
+		  <label class="keyword_label" for="input2">Filter by keyword:</label>
+		  <input class="keyword_class" type="text" id="input2">
+		</div>
+		<div class="col-md-1"></div>
+	  </div>
+
+	<div class="main-content">
+		<div class="card mx-2 main-table">
+			<div class="card-body overflow-auto">
+				  <table id="job_table"></table>
+>>>>>>> Stashed changes
 			</div>
 		</div>
 		<!-- Create the main content area with Leaflet map -->
