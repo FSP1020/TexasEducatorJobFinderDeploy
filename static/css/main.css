@@ -178,6 +178,11 @@ footer {
     display: inline-block;
     width: 40%;
   }
+
+  footer {
+    background: linear-gradient(to right, #4b86b4, #2d4e70);
+    color: white;
+}
 }
 
 
@@ -236,6 +241,8 @@ footer {
         }
 
     footer {
+        background: linear-gradient(to right, #4b86b4, #2d4e70);
+        color: white;
         font-size: .8rem;
     }
 }
@@ -295,6 +302,8 @@ footer {
     }
 
 footer {
+    background: linear-gradient(to right, #4b86b4, #2d4e70);
+    color: white;
     font-size: .8rem;
 }
 }
