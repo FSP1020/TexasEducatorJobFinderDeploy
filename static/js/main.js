@@ -5,14 +5,12 @@ var isd_data;
 // Get a reference to the job table element
 const jobTable = document.getElementById("job_table");
 
-console.log("Loading..")
-
 fetch('https://fsp1020.github.io/TexasEducatorJobFinderDeploy/static/data/TexasEmploymentSites_Filled.json')
   .then(res => res.json())
   .then(json => {
     // Remove the loading message
     document.getElementById('loading').remove();
-    document.getElementById('map').classList.remove("hidden");
+    document.getElementById('map');
 
     //json vaiable contains object with data
     isd_data = json;

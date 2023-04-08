@@ -53,11 +53,10 @@ body{
   text-shadow: 1px 1px 1px gray;
 }
   
-  
 /* set up the header area */
 h1 {
-text-align: center;
-text-shadow: 0.05rem 0.1rem 0.05rem rgb(69, 68, 68);
+  text-align: center;
+  text-shadow: 0.05rem 0.1rem 0.05rem rgb(69, 68, 68);
 }
 
 h1 a {
@@ -65,245 +64,71 @@ h1 a {
     color: white;
 }
 
-/* set up the grid with three columns */
-.main-content {
-    height: 100vh;
-    display: grid;
-    margin-right: 0.5rem;
-    grid-template-columns: 250px 500px 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas:
-      "datatable map map";
+.keyword_label_col {
+  text-align: right;
 }
 
-/* set up the sidebar area */
-.sidebar {
-    position: relative;
-    width: 100vw;
-    height: 70px;
-    background: linear-gradient(to right, #4b86b4, #2d4e70);
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+.container-fluid {
+  height: 100vh;
+  width: auto;
+}
+
+#map {
+  height: 100vh;
+  border-radius: 2px;
 }
 
 .card {
-    height: 100vh;
-    border-radius: 2px;
-}
-
-/* set up the map area */
-#map {
-    grid-area: map;
-    height: 100vh;
-    border-radius: 2px;;;
-}
-
-#map.hidden {
-    display: none;
-}
-
-.keyword_label {
-    display: inline-block;
-    width: 30%;
-    text-align: right;
-    padding-right: 10px;
- }
- 
-.keyword_class {
-    display: inline-block;
-    width: 60%;
-    border-radius: 7px;
-    border-color: white;
- }
-
- .row {
-  margin-right: 0;
- }
-
-#job_table {
-    grid-area: datatable;
-    width: 100%;
-    table-layout: fixed;
-  }
-  
-#job_table td {
-    word-wrap: break-word;
-    max-width: 50%;
-    padding: 0.5rem;
-    text-align: center;
-}
-
-.link-row:hover {
-    background: rgb(181, 180, 180);
-}
-
-#job_table a {
-    color: black;
-    text-decoration: none;
+  height: 100vh;
 }
 
 .header-row {
-    background: linear-gradient(to right, #4b86b4, #597fa5);
-    color: white;
+  background: linear-gradient(to right, #4b86b4, #597fa5);
+  color: white;
 }
 
-#loading {
-    width: 100vw;
-    height: auto;
+#job_table td {
+  word-wrap: break-word;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.link-row:hover {
+  background: rgb(181, 180, 180);
+}
+
+#job_table a {
+  color: black;
+  text-decoration: none;
+}
+
+.row {
+  margin-right: 0; margin-left: 0;
+}
+
+#job_table {
+  width: 100%;
+}
+
+
+@media only screen and (max-width: 575px) {
+  .keyword_label_col {
+    text-align: left;
   }
 
-#loading p{
-    margin-left: 1rem;
-}
-
-#loading img{
-    width: 100px;
-    margin-left: 1rem;
-}
-
-footer {
-    background: linear-gradient(to right, #4b86b4, #2d4e70);
-    color: white;
-}
-
-@media (min-width: 768px) and (max-width: 1150px) {
-  .keyword_label {
-    display: inline-block;
-    width: 50%;
-  }
-  .keyword_class {
-    display: inline-block;
-    width: 40%;
+  .bottom_keyword {
+    margin-top: 0.5rem;
   }
 
-  footer {
-    background: linear-gradient(to right, #4b86b4, #2d4e70);
-    color: white;
-}
-}
-
-
-/* media query for small screens */
-@media (min-width: 401px) and (max-width: 767px) {
-    /* set up the header area */
-    h1 {
-        grid-area: header;
-        text-align: center;
-        font-size: 1.5rem;
-        }
-
-    /* set up the grid with one column */
-    .main-content {
-        font-size: 0.8rem;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr;
-        grid-template-areas:
-          "map"
-          "datatable";
-    }
-
-    /* set up the sidebar area for small screens */
-    .sidebar {
-        background-color: linear-gradient(to right, #4b86b4, #2d4e70);
-        width: 100%;
-        height: auto;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas: "k_label k_input";
-    }
-
-    .keyword_label {
-        grid-area: k_label;
-        width: 36vw;
-    }
-
-    .keyword_class {
-        grid-area: k_input;
-        width: 55vw;
-    }
-
-    .card {
-      margin-top: 1rem;
-    }
-
-    .lower-key {
-      margin-top: 0.5rem;
-    }
-
-    /* set up the map area */
-    #map {
-        grid-area: map;
-        height: 60vh;
-        width: 100vw;
-        }
-
-    footer {
-        background: linear-gradient(to right, #4b86b4, #2d4e70);
-        color: white;
-        font-size: .8rem;
-    }
-}
-
-@media only screen and (max-width: 400px) {
-  /* set up the header area */
-  h1 {
-    grid-area: header;
-    text-align: center;
-    font-size: 1.5rem;
-    }
-
-/* set up the grid with one column */
-.main-content {
-    font-size: 0.8rem;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas:
-      "map"
-      "datatable";
-}
-
-/* set up the sidebar area for small screens */
-.sidebar {
-    background-color: linear-gradient(to right, #4b86b4, #2d4e70);
-    width: 100%;
-    height: auto;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "k_label k_input";
-}
-
-.keyword_label {
-    margin-left: 0.5rem;
-    grid-area: k_label;
-    width: 38vw;
-}
-
-.keyword_class {
-    grid-area: k_input;
-    width: 55vw;
-}
-
-.card {
-  margin-top: 1rem;
-}
-
-.lower-key {
-  margin-top: 0.5rem;
-}
-
-/* set up the map area */
-#map {
-    grid-area: map;
-    height: 60vh;
-    width: 100vw;
-    }
-
-footer {
-    background: linear-gradient(to right, #4b86b4, #2d4e70);
-    color: white;
-    font-size: .8rem;
-}
+  .container-fluid {
+    height: 100vh;
+  }
+  
+  #map {
+    height: 50vh;
+  }
+  
+  .card {
+    height: 50vh;
+  }
 }
