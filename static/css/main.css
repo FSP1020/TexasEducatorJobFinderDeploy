@@ -110,6 +110,24 @@ h1 a {
   width: 100%;
 }
 
+@media (max-width: 576px) and (max-width: 992px) {
+  .bottom_keyword {
+    margin-top: 0.5rem;
+  }
+
+  .container-fluid {
+    height: 100vh;
+  }
+  
+  #map {
+    height: 50vh;
+  }
+  
+  .card {
+    height: 50vh;
+  }
+}
+
 
 @media only screen and (max-width: 575px) {
   .keyword_label_col {
